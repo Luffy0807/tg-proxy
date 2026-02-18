@@ -1,0 +1,9 @@
+services:
+  mtg-proxy:
+    image: nineseconds/mtg@sha256:455ae4216ef33e766db5db334e42637ccd2ebc09eca6fff8cc7a10e7022b07bb
+    container_name: mtg-proxy
+    restart: unless-stopped
+    ports:
+      - "${HOST_BIND_IP:-0.0.0.0}:${HOST_PORT:-8443}:3128"
+    volumes:
+      - ./config.toml:/config.toml:ro
