@@ -11,5 +11,5 @@ HOST_PORT=8443
 docker exec mtg-proxy /mtg access /config.toml
 
 
-##QS
+## QS
 bash -lc 'curl -fsSL https://raw.githubusercontent.com/Luffy0807/tg-proxy/main/install.sh | bash'
